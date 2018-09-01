@@ -3,16 +3,16 @@ A Julia Library for Outlier Detection (Anomaly Detection), abbreviated as JLOD.
 ----------------------------
 ### Motivation
 
-While developing [PyOD (Python Outlier Detection Toolbox)](https://github.com/yzhao062/Pyod), I have been upset occasionally due to the complexity of writing highly efficient code in Python. Although Python is famous for its comprehensiveness and short learning curve, it also receives critics regarding its efficiency -- a lot of modules are therefore written in other languages and ported to Python, e.g., C.
+While developing [PyOD (Python Outlier Detection Toolbox)](https://github.com/yzhao062/Pyod), I have been upset occasionally due to the complexity of writing highly efficient code in Python. Although Python is famous for its comprehensiveness and easiness, it also receives critics regarding its efficiency -- a lot of modules are therefore written in other languages and ported to Python, e.g., C.
 
-This is the motivation of developing a comprehensive Outlier Detection toolbox in **Julia**, the next generation scientific computing language, famous for flexible syntax and efficiency, on par with C. See more about **[Julia](https://docs.julialang.org/en/v0.6.2/manual/introduction/#man-introduction-1)** here.
+This is the motivation of developing a comprehensive Outlier Detection toolbox in **Julia**, the next generation scientific computing language, famous for flexible syntax and efficiency (on par with C). See more about **[Julia](https://docs.julialang.org/en/v0.6.2/manual/introduction/#man-introduction-1)** here.
 
-Similar to PyOD, OutlierDetection.jl also strives for: 
+Similar to PyOD, JLOD will strive for: 
 - **Unified and consistent APIs** across various anomaly detection algorithms for easy use.
 - **Advanced functions**, e.g., **Outlier Ensemble Frameworks** to combine multiple detectors.
 - **Detailed API Reference, Interactive Examples in Jupyter Notebooks** for better reliability.
 
-Different from PyOD, we have a high hope to **achieve faster and more scalable outlier mining with JLOD**.
+Different from PyOD, there is a high hope to **achieve faster and more scalable outlier mining with JLOD**.
 
 ------------------------
 ### A Taste of Julia Outlier Detection
@@ -62,9 +62,11 @@ To show the syntax of Julia, I create a quick demo for using KNN detector in min
 
 ### Development RoadMap of JLOD
 
-It is noted that **Julia is still NOT in its maturity as of Sep 2018**, with the chance of introducing significant changes. For this reason, two development plans are running in parallel:
+It is noted that **Julia is still NOT in its maturity as of Sep 2018**, with the chance of introducing significant usage changes. For this reason, two development plans are running in parallel:
 
-- **Implementing native Julia models** for some detection models
-- **Porting Python models from PyOD** using PyCall as a temporary solution or as a placeholder for the future refactoring. A similar approach has been taken for [ScikitLearn](https://github.com/cstjean/ScikitLearn.jl). 
+1. **Implementing native Julia models** for some detection models
+2. **Porting Python models from PyOD** using PyCall as a temporary solution or as a placeholder for the future refactoring. A similar approach has been taken for [ScikitLearn](https://github.com/cstjean/ScikitLearn.jl). 
 
-As usual, you are more than welcome to share your ideas by opening an issue or dropping me an email at yuezhao@cs.toronto.edu :)
+Appratently, there is balance should be maintained between two approaches, which is still under exploration. As usual, you are more than welcome to share your ideas by opening an issue or dropping me an email at yuezhao@cs.toronto.edu :)
+
+**Meanwhile, feel free to star/watch/fork, and stat tuned for something interesting rolling out in the next few months**.
