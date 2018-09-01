@@ -21,19 +21,3 @@ function generate_data(n_data::Int64=1000, n_features::Int64=2,
     y = convert(Array{Int64, 1}, vcat(zeros(n_inliers), ones(n_outliers)))
     transpose(X), y
 end
-
-# print(generate_data())
-X, y = generate_data(100, 3)
-
-
-#%%
-using NearestNeighbors
-
-# Create a KD tree for this purpose
-kdtree = KDTree(X; leafsize = 15)
-k = 10
-idxs, dists = knn(kdtree, X, k, true)
-
-for i = 1:100
-    println(i, " ", mean(dists[i]))
-end

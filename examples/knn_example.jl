@@ -2,10 +2,14 @@ include("../src/utilities.jl")
 using NearestNeighbors
 using ROCAnalysis
 
+# create 100 samples with 2 dimensions, in which 10% are outliers
 n_samples = 100
 n_features = 2
-X, y = generate_data(n_samples, n_features)
+contamination = 0.1
+X, y = generate_data(n_samples, n_features, contamination)
 
+# define K for finding nearest neighbors
+k = 10
 # Create a KD tree for this purpose
 kdtree = KDTree(X; leafsize = 15)
 idxs, dists = knn(kdtree, X, k, true)
